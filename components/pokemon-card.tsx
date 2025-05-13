@@ -22,9 +22,9 @@ export default function PokemonCard({ name, url }: PokemonCardProps) {
         },
       }}
     >
-      <Card className="overflow-hidden h-[180px] bg-gradient-to-br from-slate-50 to-slate-100 shadow-sm hover:shadow-md transition-all duration-300 border-slate-200">
+      <Card className="overflow-hidden h-[180px] bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 shadow-sm hover:shadow-md transition-all duration-300 border-slate-200 dark:border-slate-700">
         <CardHeader className="pb-0 pt-3 px-4">
-          <CardTitle className="capitalize text-sm font-medium text-slate-700">
+          <CardTitle className="capitalize text-sm font-medium text-slate-700 dark:text-slate-200">
             {name}
           </CardTitle>
         </CardHeader>
@@ -35,7 +35,7 @@ export default function PokemonCard({ name, url }: PokemonCardProps) {
               alt={name}
               fill
               sizes="(max-width: 640px) 64px, 80px"
-              className="object-contain drop-shadow-sm"
+              className="object-contain drop-shadow-sm dark:brightness-110 dark:drop-shadow-[0_0_2px_rgba(255,255,255,0.3)]"
             />
           </div>
         </CardContent>
