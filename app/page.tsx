@@ -16,7 +16,7 @@ export default async function Home({
   searchParams: { page?: string };
 }) {
   const page = Number(searchParams.page) || 1;
-  const limit = 10;
+  const limit = 18;
   const offset = (page - 1) * limit;
 
   const pokemons = await fetch(
