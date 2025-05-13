@@ -14,10 +14,11 @@ import {
 export default async function Home({
   searchParams,
 }: {
-  searchParams: { page?: string; query?: string };
+  searchParams: Promise<{ page?: string; query?: string }>;
 }) {
-  const page = Number(searchParams.page) || 1;
-  const query = searchParams.query || "";
+  const params = await searchParams;
+  const page = Number(params.page) || 1;
+  const query = params.query || "";
   const limit = 18;
   const offset = (page - 1) * limit;
 
