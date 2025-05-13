@@ -28,11 +28,11 @@ export default async function Home({
   const totalPages = Math.ceil(totalCount / limit);
 
   return (
-    <main className="container mx-auto py-8">
-      <h1 className="text-3xl font-bold mb-8 text-center">
+    <main className="container mx-auto py-8 px-4">
+      <h1 className="text-3xl font-bold mb-6 text-center text-primary">
         Pokémon Collection
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3 mb-8">
         {data.results.map((pokemon) => (
           <PokemonCard
             key={pokemon.name}

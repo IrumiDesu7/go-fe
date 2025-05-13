@@ -18,22 +18,26 @@ export default function PokemonCard({ name, url }: PokemonCardProps) {
       whileHover={{
         scale: 1.03,
         transition: {
-          duration: 0.3,
+          duration: 0.2,
         },
       }}
     >
-      <Card>
-        <CardHeader className="pb-2">
-          <CardTitle className="capitalize text-lg">{name}</CardTitle>
+      <Card className="overflow-hidden h-[180px] bg-gradient-to-br from-slate-50 to-slate-100 shadow-sm hover:shadow-md transition-all duration-300 border-slate-200">
+        <CardHeader className="pb-0 pt-3 px-4">
+          <CardTitle className="capitalize text-sm font-medium text-slate-700">
+            {name}
+          </CardTitle>
         </CardHeader>
-        <CardContent className="flex flex-col items-center">
-          <Image
-            src={imageUrl}
-            alt={name}
-            width={120}
-            height={120}
-            className="mb-2"
-          />
+        <CardContent className="flex justify-center items-center p-2">
+          <div className="relative w-16 h-16 sm:w-20 sm:h-20">
+            <Image
+              src={imageUrl}
+              alt={name}
+              fill
+              sizes="(max-width: 640px) 64px, 80px"
+              className="object-contain drop-shadow-sm"
+            />
+          </div>
         </CardContent>
       </Card>
     </motion.div>
